@@ -1,0 +1,81 @@
+﻿@page
+@model WebAssForUna.Pages.signupModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, AuthoringTagHelpers
+@{
+        Layout = null;
+    }
+
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>signup</title>
+    <link rel="stylesheet" type="text/css" href="~/Pages/StyleSheet1.css"/>
+</head>
+<body>
+    
+        
+    <form method="post">
+        <p><bold><font size="6">Attractive dating website for attractive people</font></bold></p>
+        
+        <p>Firstname:</p>
+        <label asp-for="firstname"><input asp-for="firstname"  type="text" id="firstname" value="" /></label>
+        
+        <p>Surname:</p>
+        <label asp-for="surname"><input asp-for="surname" type="text" id="surname" value="" /></label>
+        
+
+        <p>Gender:</p>
+        <label asp-for="gender"><input asp-for="gender" type="radio" id="gender" value="gender" />Male</label>
+        <label asp-for="gender"><input asp-for="gender" type="radio" id="gender" value="gender" />Female</label>
+        <label asp-for="gender"><input asp-for="gender" type="radio" id="gender" value="gender" />Other</label>
+
+        <p>Height:</p>
+        <label asp-for="height"><input asp-for="height" type="text" id="height" value="" /></label>
+        
+
+        <p>Date of birth:</p>
+        <label asp-for="birthday"><input asp-for="birthday" type="date" id="birthday" value="" /></label>
+        
+
+        <p>P.P.S.N:</p>
+        <label asp-for="ppsn"><input asp-for="ppsn" type="text" id="ppsn" value="" /></label>
+       
+
+        <p>Relationship Status:</p>
+        <label asp-for="status"><input asp-for="status" type="radio"  value="status" />Single</label>
+        <label asp-for="status"><input asp-for="status" type="radio"  value="status" />Taken</label>
+        <label asp-for="status"><input asp-for="status" type="radio" value="status" />Divorced/Seperated</label>
+
+        <p>Interests</p>
+        <label asp-for="interests"><input asp-for="interests" type="checkbox"  />outdoor sports</label>
+        <label asp-for="interests"><input asp-for="interests" type="checkbox" />watching sports</label>
+        <label asp-for="interests"><input asp-for="interests" type="checkbox" />Food</label>
+        <label asp-for="interests"><input asp-for="interests" type="checkbox" />Pubs</label>
+        <label asp-for="interests"><input asp-for="interests" type="checkbox" />Cinema</label>
+        <label asp-for="interests"><input asp-for="interests" type="checkbox" />Theatre</label>
+        <label asp-for="interests"><input asp-for="interests" type="checkbox" />Music</label>
+        <label asp-for="interests"><input asp-for="interests" type="checkbox"  />Reading</label>
+        <label asp-for="interests"><input asp-for="interests" type="checkbox" />outdoor sports</label>
+        <label asp-for=" interests"><input asp-for="interests" type="checkbox" />Boardgames</label>
+        
+        
+
+        <p>Phone number:</p>
+        <label asp-for="phonenum"><input asp-for="phonenum" type="text" value="" /></label>
+        
+
+        <p>E-mail</p>
+        <label asp-for="email"><input asp-for="email" type="text" value="" /></label>
+        
+        <input type="submit" value="submit"/>
+            
+    </form>
+</body>
+</html>
