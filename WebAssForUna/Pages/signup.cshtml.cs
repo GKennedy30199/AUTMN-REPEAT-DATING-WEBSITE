@@ -11,35 +11,41 @@ namespace WebAssForUna.Pages
 {
     public class signupModel : PageModel
     {
-        public void OnGet()
-        {
-
-        }
+        
         public void OnPost()
         {
-
+            var Firstname = Request.Form["Firstname"];
+            var Surname = Request.Form["Surname"];
+            var Gender = Request.Form["Gender"];
+            var Height = Request.Form["Height"];
+            var Birthday = Request.Form["Birthday"];
+            var Ppsn = Request.Form["Ppsn"];
+            var Status = Request.Form["Status"];
+            var Interests = Request.Form["Interests"];
+            var Phonenum = Request.Form["Phonenum"];
+            var Email = Request.Form["Email"];
         }
 
         [BindProperty]
-        public string firstname { get; set; }
+        public string Firstname { get; set; }
         [BindProperty]
-        public string surname { get; set; }
+        public string Surname { get; set; }
         [BindProperty]
-        public string gender { get; set; }
+        public string Gender { get; set; }
         [BindProperty]
-        public int height { get; set; }
+        public int Height { get; set; }
         [BindProperty]
-        public int birthday { get; set; }
+        public int Birthday { get; set; }
         [BindProperty]
-        public int ppsn { get; set; }
+        public int Ppsn { get; set; }
         [BindProperty]
-        public string status { get; set; }
+        public string Status { get; set; }
         [BindProperty]
-        public string interests { get; set; }
+        public string Interests { get; set; }
         [BindProperty]
-        public int phonenum { get; set; }
+        public int Phonenum { get; set; }
         [BindProperty]
-        public string email { get; set; }
+        public string Email { get; set; }
          
         
 
