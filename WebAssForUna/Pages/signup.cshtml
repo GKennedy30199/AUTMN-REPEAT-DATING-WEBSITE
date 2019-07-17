@@ -25,11 +25,11 @@
         
         <p><bold><font size="6">Attractive dating website for attractive people</font></bold></p>
         
-        <p>Firstname:</p>
-        <label asp-for="Firstname"></label><input asp-for="Firstname" type="text" value="">
+        
+        <label asp-for="Firstname"></label><input type="text" asp-for="Firstname" value="">
         
         <p>Surname:</p>
-        <label asp-for="Surname"><input asp-for="Surname" type="text" value="" /></label>
+        <label asp-for="Surname"><input asp-for="Surname" type="text" value=""/></label>
         
 
         <p>Gender:</p>
@@ -38,7 +38,7 @@
         <label asp-for="Gender"><input asp-for="Gender" type="radio"  value="" />Other</label>
 
         <p>Height:</p>
-        <label asp-for="Height"><input asp-for="Height" type="text" value=""/></label>
+        <label asp-for="Height"><input asp-for="Height" type="number" value=""/></label>
         
 
         <p>Date of birth:</p>
@@ -46,7 +46,7 @@
         
 
         <p>P.P.S.N:</p>
-        <label asp-for="Ppsn"><input asp-for="Ppsn" type="text"  value="" /></label>
+        <label asp-for="Ppsn"><input asp-for="Ppsn" type="number"  value="" /></label>
        
 
         <p>Relationship Status:</p>
@@ -69,7 +69,7 @@
         
 
         <p>Phone number:</p>
-        <label asp-for="Phonenum"><input asp-for="Phonenum" type="text" value=""/></label>
+        <label asp-for="Phonenum"><input asp-for="Phonenum" type="number" value=""/></label>
         
 
         <p>E-mail</p>

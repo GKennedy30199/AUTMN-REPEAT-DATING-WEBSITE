@@ -11,8 +11,6 @@ namespace WebAssForUna.Pages
 {
     public class SignupModel : PageModel
     {
-        
-      
 
         [BindProperty]
         public string Firstname { get; set; }
@@ -36,7 +34,7 @@ namespace WebAssForUna.Pages
         public string Status { get; set; }
 
         [BindProperty]
-        public string Interests { get; set; }
+        public bool Interests { get; set; }
 
         [BindProperty]
         public int Phonenum { get; set; }
