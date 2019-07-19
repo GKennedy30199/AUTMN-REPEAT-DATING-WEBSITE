@@ -17,9 +17,17 @@ namespace WebAssForUna.Pages
 
         [BindProperty]
         public string Surname { get; set; }
-
         [BindProperty]
         public string Gender { get; set; }
+
+        [BindProperty]
+        public string Male { get; set; }
+
+        [BindProperty]
+        public string Female { get; set; }
+
+        [BindProperty]
+        public string Other { get; set; }
 
         [BindProperty]
         public int Height { get; set; }
@@ -32,9 +40,33 @@ namespace WebAssForUna.Pages
 
         [BindProperty]
         public string Status { get; set; }
+        [BindProperty]
+        public string Single { get; set; }
+        [BindProperty]
+        public string Taken { get; set; }
+        [BindProperty]
+        public string Complicated { get; set; }
 
         [BindProperty]
         public bool Interests { get; set; }
+        [BindProperty]
+        public bool OutdoorSports { get; set; }
+        [BindProperty]
+        public bool WatchingSports { get; set; }
+        [BindProperty]
+        public bool Food { get; set; }
+        [BindProperty]
+        public bool Pubs { get; set; }
+        [BindProperty]
+        public bool Cinema { get; set; }
+        [BindProperty]
+        public bool Theatre { get; set; }
+        [BindProperty]
+        public bool Music { get; set; }
+        [BindProperty]
+        public bool Reading { get; set; }
+        [BindProperty]
+        public bool Boardgames { get; set; }
 
         [BindProperty]
         public int Phonenum { get; set; }

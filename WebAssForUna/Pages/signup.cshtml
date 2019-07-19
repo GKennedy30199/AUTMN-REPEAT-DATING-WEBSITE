@@ -21,59 +21,59 @@
 
     
   <body>
-    <form>
+    <form method="post">
         
         <p><bold><font size="6">Attractive dating website for attractive people</font></bold></p>
         
-        
-        <label asp-for="Firstname"></label><input type="text" asp-for="Firstname">
+        <p>Firstname:</p>
+        <label asp-for="Firstname"><input type="text" asp-for="Firstname"></label>
         
         <p>Surname:</p>
-        <label asp-for="Surname"><input asp-for="Surname" type="text" value=""/></label>
+        <label asp-for="Surname"><input type="text" asp-for="Surname"  /></label>
         
 
         <p>Gender:</p>
-        <label asp-for="Gender"><input asp-for="Gender" type="radio"  value="" />Male</label>
-        <label asp-for="Gender"><input asp-for="Gender" type="radio"  value="" />Female</label>
-        <label asp-for="Gender"><input asp-for="Gender" type="radio"  value="" />Other</label>
+        <label asp-for="Male"><input value="Male" id="Male" type="radio" asp-for="Gender" />Male</label>
+        <label asp-for="Female"><input value="Female" id="Female" type="radio" asp-for="Gender"/>Female</label>
+        <label asp-for="Other"><input value="Other" id="Other" type="radio" asp-for="Gender" />Other</label>
 
-        <p>Height:</p>
-        <label asp-for="Height"><input asp-for="Height" type="number" value=""/></label>
+
+        <p>Height(in ft):</p>
+        <label asp-for="Height"><input type="number" asp-for="Height" /></label>
         
 
         <p>Date of birth:</p>
-        <label asp-for="Birthday"><input asp-for="Birthday" type="date"  value="" /></label>
+        <label asp-for="Birthday"><input type="date" asp-for="Birthday" /></label>
         
 
         <p>P.P.S.N:</p>
-        <label asp-for="Ppsn"><input asp-for="Ppsn" type="number"  value="" /></label>
+        <label asp-for="Ppsn"><input asp-for="Ppsn" type="number"   /></label>
        
 
         <p>Relationship Status:</p>
-        <label asp-for="Status"><input asp-for="Status" type="radio"  value="" />Single</label>
-        <label asp-for="Status"><input asp-for="Status" type="radio"  value="" />Taken</label>
-        <label asp-for="Status"><input asp-for="Status" type="radio" value="" />Divorced/Seperated</label>
+        <label asp-for="Single"><input value="Single" id="Single" type="radio" asp-for="Status" />Single and ready to Mingle</label>
+        <label asp-for="Taken"><input value="Taken" id="Taken" type="radio" asp-for="Status" />Taken couple looking for fun</label>
+        <label asp-for="Complicated"><input value="Complicated" id="Complicated" type="radio" asp-for="Status" />It's Complicated</label>
 
         <p>Interests</p>
-        <label asp-for="Interests"><input asp-for="Interests" type="checkbox" value="" />outdoor sports</label>
-        <label asp-for="Interests"><input asp-for="Interests" type="checkbox" value=""/>watching sports</label>
-        <label asp-for="Interests"><input asp-for="Interests" type="checkbox" value="" />Food</label>
-        <label asp-for="Interests"><input asp-for="Interests" type="checkbox"  value=""/>Pubs</label>
-        <label asp-for="Interests"><input asp-for="Interests" type="checkbox" value=""/>Cinema</label>
-        <label asp-for="Interests"><input asp-for="Interests" type="checkbox" value=""/>Theatre</label>
-        <label asp-for="Interests"><input asp-for="Interests" type="checkbox" value=""/>Music</label>
-        <label asp-for="Interests"><input asp-for="Interests" type="checkbox" value=""/>Reading</label>
-        <label asp-for="Interests"><input asp-for="Interests" type="checkbox" value=""/>outdoor sports</label>
-        <label asp-for="Interests"><input asp-for="Interests" type="checkbox" value=""/>Boardgames</label>
+        <label asp-for=OutdoorSports><input type="checkbox" data-val="true" id="OutdoorSports" name="OutdoorSports" asp-for="Interests"/>Outdoor Sports</label>
+        <label asp-for="WatchingSports"><input type="checkbox" data-val="true" id="WatchingSports" name="WatchingSports" value="true" asp-for="Interests" />Watching Sports</label>
+        <label asp-for="Interests"><input asp-for="Interests" type="checkbox" />Food</label>
+        <label asp-for="Interests"><input asp-for="Interests" type="checkbox"  />Pubs</label>
+        <label asp-for="Interests"><input asp-for="Interests" type="checkbox" />Cinema</label>
+        <label asp-for="Interests"><input asp-for="Interests" type="checkbox" />Theatre</label>
+        <label asp-for="Interests"><input asp-for="Interests" type="checkbox" />Music</label>
+        <label asp-for="Interests"><input asp-for="Interests" type="checkbox" />Reading</label>
+        <label asp-for="Interests"><input asp-for="Interests" type="checkbox" />Boardgames</label>
         
         
 
         <p>Phone number:</p>
-        <label asp-for="Phonenum"><input asp-for="Phonenum" type="number" value=""/></label>
+        <label asp-for="Phonenum"><input asp-for="Phonenum" type="number" /></label>
         
 
         <p>E-mail</p>
-        <label asp-for="Email"><input asp-for="Email" type="text" value=""/></label>
+        <label asp-for="Email"><input asp-for="Email" type="text" /></label>
         
         <input type="submit" value="submit"/>
        
