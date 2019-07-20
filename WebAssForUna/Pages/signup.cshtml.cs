@@ -47,26 +47,9 @@ namespace WebAssForUna.Pages
         [BindProperty]
         public string Complicated { get; set; }
 
+        public string[] InterestNames { get; set; } = { "Outdoor Sports", "Food", "Pubs", "Cinema", "Theatre", "Music", "Reading", "Gaming", "Watching Sports", "Boardgames" };
         [BindProperty]
-        public bool Interests { get; set; }
-        [BindProperty]
-        public bool OutdoorSports { get; set; }
-        [BindProperty]
-        public bool WatchingSports { get; set; }
-        [BindProperty]
-        public bool Food { get; set; }
-        [BindProperty]
-        public bool Pubs { get; set; }
-        [BindProperty]
-        public bool Cinema { get; set; }
-        [BindProperty]
-        public bool Theatre { get; set; }
-        [BindProperty]
-        public bool Music { get; set; }
-        [BindProperty]
-        public bool Reading { get; set; }
-        [BindProperty]
-        public bool Boardgames { get; set; }
+        public bool[] InterestsChosen { get; set; } = new bool[10];
 
         [BindProperty]
         public int Phonenum { get; set; }

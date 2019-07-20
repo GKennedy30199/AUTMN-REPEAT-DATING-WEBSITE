@@ -55,16 +55,15 @@
         <label asp-for="Taken"><input value="Taken" id="Taken" type="radio" asp-for="Status" />Taken couple looking for fun</label>
         <label asp-for="Complicated"><input value="Complicated" id="Complicated" type="radio" asp-for="Status" />It's Complicated</label>
 
-        <p>Interests</p>
-        <label asp-for=OutdoorSports><input type="checkbox" data-val="true" id="OutdoorSports" name="OutdoorSports" asp-for="Interests"/>Outdoor Sports</label>
-        <label asp-for="WatchingSports"><input type="checkbox" data-val="true" id="WatchingSports" name="WatchingSports" value="true" asp-for="Interests" />Watching Sports</label>
-        <label asp-for="Interests"><input asp-for="Interests" type="checkbox" />Food</label>
-        <label asp-for="Interests"><input asp-for="Interests" type="checkbox"  />Pubs</label>
-        <label asp-for="Interests"><input asp-for="Interests" type="checkbox" />Cinema</label>
-        <label asp-for="Interests"><input asp-for="Interests" type="checkbox" />Theatre</label>
-        <label asp-for="Interests"><input asp-for="Interests" type="checkbox" />Music</label>
-        <label asp-for="Interests"><input asp-for="Interests" type="checkbox" />Reading</label>
-        <label asp-for="Interests"><input asp-for="Interests" type="checkbox" />Boardgames</label>
+        
+        <fieldset>
+            <legend>Interests:</legend>
+            @for(int i=0; i < @Model.InterestNames.Length; i++ )
+            {
+                <input asp-for=InterestsChosen[i]>
+                <label asp-for=InterestsChosen[i]>@Model.InterestNames[i]</label>
+            }
+        </fieldset>
         
         
 
