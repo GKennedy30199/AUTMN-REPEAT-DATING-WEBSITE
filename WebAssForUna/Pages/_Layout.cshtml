@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <title>@ViewData["Title"]-Lovers Lane</title>
+</head>
+<body>
+    <h1>@ViewData["Title"]-Lovers Lane</h1>
+        @RenderBody()
+
+    <footer>&copy; Gavan(S00180333) @DateTime.Now.ToShortDateString()</footer>
+    <script src="~/lib/dist/jquery.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    @RenderSection("Scripts",required:false)
+</body>
+</html>
+
+
+

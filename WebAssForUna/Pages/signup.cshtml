@@ -3,8 +3,12 @@
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @addTagHelper *, AuthoringTagHelpers
 @{
-        Layout = null;
-    }
+
+}
+@using WebAssForUna.Models
+
+
+
 
 
 
@@ -16,68 +20,107 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>signup</title>
-    <link rel="stylesheet" type="text/css" href="~/Pages/StyleSheet1.css"/>
+    <link href="~/Pages/StyleSheet1.css" rel="stylesheet" type="text/css" />
+
+
 </head>
 
-    
-  <body>
+
+<body>
     <form method="post">
-        
+        <div asp-validation-summary="All"></div>
+
         <p><bold><font size="6">Attractive dating website for attractive people</font></bold></p>
-        
-        <p>Firstname:</p>
-        <label asp-for="Firstname"><input type="text" asp-for="Firstname"></label>
-        
-        <p>Surname:</p>
-        <label asp-for="Surname"><input type="text" asp-for="Surname"  /></label>
-        
-
-        <p>Gender:</p>
-        <label asp-for="Male"><input value="Male" id="Male" type="radio" asp-for="Gender" />Male</label>
-        <label asp-for="Female"><input value="Female" id="Female" type="radio" asp-for="Gender"/>Female</label>
-        <label asp-for="Other"><input value="Other" id="Other" type="radio" asp-for="Gender" />Other</label>
 
 
-        <p>Height(in ft):</p>
-        <label asp-for="Height"><input type="number" asp-for="Height" /></label>
-        
+        <div>
+            <p>Firstname</p>
+            <label asp-for="Signup.Firstname"></label>
+            <input asp-for="Signup.Firstname">
 
-        <p>Date of birth:</p>
-        <label asp-for="Birthday"><input type="date" asp-for="Birthday" /></label>
-        
+        </div>
 
-        <p>P.P.S.N:</p>
-        <label asp-for="Ppsn"><input asp-for="Ppsn" type="number"   /></label>
-       
 
-        <p>Relationship Status:</p>
-        <label asp-for="Single"><input value="Single" id="Single" type="radio" asp-for="Status" />Single and ready to Mingle</label>
-        <label asp-for="Taken"><input value="Taken" id="Taken" type="radio" asp-for="Status" />Taken couple looking for fun</label>
-        <label asp-for="Complicated"><input value="Complicated" id="Complicated" type="radio" asp-for="Status" />It's Complicated</label>
 
-        
-        <fieldset>
-            <legend>Interests:</legend>
-            @for(int i=0; i < @Model.InterestNames.Length; i++ )
-            {
-                <input asp-for=InterestsChosen[i]>
-                <label asp-for=InterestsChosen[i]>@Model.InterestNames[i]</label>
-            }
-        </fieldset>
-        
-        
+        <div>
+            <p>Surname</p>
+            <label asp-for=Signup.Surname></label>
+            <input asp-for=Signup.Surname>
+        </div>
 
-        <p>Phone number:</p>
-        <label asp-for="Phonenum"><input asp-for="Phonenum" type="number" /></label>
-        
+        <div>
+            <p>Gender</p>
+            <label asp-for="Signup.Male"><input type="radio" asp-for="Signup.Male"></label>
+            <label asp-for="Signup.Female"><input type="radio" asp-for="Signup.Female"></label>
+            <label asp-for="Signup.Other"><input type="radio" asp-for="Signup.Other"></label>
+        </div>
 
-        <p>E-mail</p>
-        <label asp-for="Email"><input asp-for="Email" type="text" /></label>
-        
-        <input type="submit" value="submit"/>
-       
-            
+
+
+        <p>Height</p>
+        <label asp-for="Signup.Height"><input type="number" asp-for="Signup.Height" /></label>
+
+
+
+
+        <div>
+            <fieldset>
+                <p>Date of Birth</p>
+                <label asp-for="Signup.Birthday"><input type="date" asp-for="Signup.Birthday" /></label>
+            </fieldset>
+        </div>
+
+
+        <div>
+            <fieldset>
+                <legend>P.P.S.N</legend>
+                <label asp-for="Signup.Ppsn"><input asp-for="Signup.Ppsn" type="number" /></label>
+            </fieldset>
+        </div>
+
+
+
+        <div>
+            <p>Relationship Status</p>
+            <label asp-for="Signup.Single"><input value="Single" id="Single" type="radio" asp-for="Signup.Status" />Single and ready to Mingle</label>
+            <label asp-for="Signup.Taken"><input value="Taken" id="Taken" type="radio" asp-for="Signup.Status" />Taken couple looking for fun</label>
+            <label asp-for="Signup.Complicated"><input value="Complicated" id="Complicated" type="radio" asp-for="Signup.Status" />It's Complicated</label>
+        </div>
+
+
+
+
+
+
+
+        <p>Interests</p>
+        @for (int i = 0; i < @Model.InterestNames.Length; i++)
+        {
+            <input asp-for=InterestsChosen[i]>
+            <label asp-for=InterestsChosen[i]>@Model.InterestNames[i]</label>
+        }
+
+
+
+
+
+        <div>
+            <p>Phone Number</p>
+            <label asp-for="Phonenum"><input asp-for="Phonenum" type="number" /></label>
+        </div>
+
+
+
+        <div>
+            <p>Email</p>
+            <label asp-for="Email"><input asp-for="Email" type="text" /></label>
+        </div>
+
+
+        <input type="submit" value="submit" />
+
     </form>
-  </body>
+    @Model.Message
+</body>
 
 </html>
